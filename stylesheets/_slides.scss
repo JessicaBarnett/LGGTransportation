@@ -1,7 +1,17 @@
 /*****  Slider  *****/
 
+iframe{
+  width: 100%;
+  height: 100%;
+  pointer-events:none;
+}
+
 .container{ 
     position: relative; //to set a context for absolutely-positioned prev/next/pagination icons
+}
+
+.slidesjs-slide{
+  height: 90%;
 }
 
 .slidesjs-previous, .slidesjs-next, .slidesjs-pagination-item a{
