@@ -1,0 +1,38 @@
+/****  Colors  ****/
+
+//named
+$darkPurple: rgba(6, 0, 44, .8);
+
+
+/****  Fonts  ****/
+
+$bodyFont: 'Droid Sans', sans-serif;
+
+%bodyText{
+	font-family: $bodyFont;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+%bodyTextBold{
+	@extend %bodyText;
+	font-weight: 700;
+}
+
+%secondaryHeadline{
+	@extend %bodyText;
+	font-size: 1.7rem;
+}
+
+%mainHeadline{
+	@extend %bodyTextBold;
+	font-size: 2.6rem;
+}
+
+%copyright{
+	@extend %bodyTextBold;
+}
+
+
+/**** Details ****/
+$dividingLine: "2px solid rgba(0, 0, 0, .1)";

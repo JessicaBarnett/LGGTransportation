@@ -1,0 +1,113 @@
+@import "layout";
+@import "vars";
+@import "slidesjs";
+@import "slides";
+
+/*****  General  ******/
+
+body{
+	background: url("../images/textures/brushed.png") #DBDBDB;
+}
+
+body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider {
+	@extend %sixteenColumns;
+	@extend %container;
+	@extend %bodyText;
+}
+.mainFooter, .mainHeader{
+	@include floatAllDirectChildrenLeft;
+	background-color: rgba(255, 255, 255, .3);
+}
+
+a, a:visited{
+	text-decoration: none;
+	color: black;
+}
+
+/*****  mainHeader  *****/
+
+
+.mainHeader{
+	border-bottom: #{$dividingLine};
+	padding: 1.25rem;
+	padding-left: 2rem;
+}
+
+.pageLogo{
+	@extend %eightColumns;
+}
+
+.dispatchFlag{
+	@extend %fourColumns;
+}
+
+/*****  mainNav  *****/
+
+.mainNav{
+	margin: 0 auto;
+}
+
+.mainNav li{
+	display: inline-block;
+	@extend %threeColumns;
+	min-height: 5rem;
+	padding-top: 2rem;
+	text-align: center;
+}
+
+.mainNav li:hover{
+	background-color: lightgray;
+}
+
+/***** mainContent ******/
+
+.mainContent{
+	@extend %fourteenColumns;
+	margin: 2.5rem auto;
+
+}
+
+h2 {
+	@extend %mainHeadline;
+}
+
+.contentParagraph{
+	margin-top: 2rem;
+}
+
+/*****  mainFooter  *****/
+
+.mainFooter{
+	border-top: #{$dividingLine};
+	padding: 2rem;
+	line-height: 2rem;
+}
+
+h3{
+	@extend %secondaryHeadline;
+}
+
+.contact, .address{
+	@extend %sixColumns;
+}
+.contact {
+	margin-left: 3rem;
+}
+
+.address{
+	margin-right: 3rem;
+}
+
+
+.address{
+	float: right;
+}
+
+
+.copyright{
+	@extend %sixteenColumns;
+	@extend %copyright;
+	padding-top: 1rem;
+	text-align: center;
+	background-color: rgba(255, 255, 255, .3);
+}
