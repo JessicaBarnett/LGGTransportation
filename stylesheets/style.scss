@@ -1,5 +1,6 @@
 @import "layout";
 @import "vars";
+
 @import "slidesjs";
 @import "slides";
 
@@ -26,20 +27,25 @@ a, a:visited{
 
 /*****  mainHeader  *****/
 
-
 .mainHeader{
 	border-bottom: #{$dividingLine};
 	padding: 1.25rem;
 	padding-left: 2rem;
 }
-
-.pageLogo{
-	@extend %eightColumns;
+.mainHeader a{
+	display: inline-block;
 }
-
-.dispatchFlag{
+.pageLogoWrap{
+	@extend %nineColumns;
+}
+.dispatchFlagWrap{
 	@extend %fourColumns;
 }
+.pageLogo, .dispatchFlag{
+	min-width: 100%;
+	min-height: 100%;
+}
+
 
 /*****  mainNav  *****/
 
@@ -50,9 +56,16 @@ a, a:visited{
 .mainNav li{
 	display: inline-block;
 	@extend %threeColumns;
-	min-height: 5rem;
-	padding-top: 2rem;
+	height: 5rem;
+	line-height: 5rem;
+	// padding-top: 2rem;
 	text-align: center;
+}
+
+.mainNav a{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
 }
 
 .mainNav li:hover{
@@ -90,19 +103,15 @@ h3{
 .contact, .address{
 	@extend %sixColumns;
 }
+
 .contact {
 	margin-left: 3rem;
 }
 
 .address{
 	margin-right: 3rem;
+	float: right; //kind of a hack?
 }
-
-
-.address{
-	float: right;
-}
-
 
 .copyright{
 	@extend %sixteenColumns;
@@ -112,3 +121,5 @@ h3{
 	text-align: center;
 	background-color: rgba(255, 255, 255, .3);
 }
+
+@import "mediaQueries";

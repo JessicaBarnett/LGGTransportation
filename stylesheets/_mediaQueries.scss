@@ -1,0 +1,11 @@
+@media screen and #{$tablets}{
+	.contact, .address{
+		width: 100%; //can't @extend %eightColumns in a media query (???)
+		margin: 0;
+		text-align: center;
+		padding-bottom: 2rem;
+	}
+	.mainFooter{
+		padding: 1rem;
+	}
+}

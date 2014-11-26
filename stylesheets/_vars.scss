@@ -1,8 +1,16 @@
+/**** Media Queries ****/
+
+//breakpoints match ones used in slidesjs plugin
+$wide-screens: "(min-width: 1200px)";
+//$laptops: "(min-width: 768px) and (max-width: 979px)";
+$laptops: "(max-width: 979px)";
+$tablets: "(max-width: 767px)";
+$smartphones: "(max-width: 480px)";
+
 /****  Colors  ****/
 
-//named
 $darkPurple: rgba(6, 0, 44, .8);
-
+$lighterPurple: rgba(72, 69, 92, .8);
 
 /****  Fonts  ****/
 
@@ -12,6 +20,10 @@ $bodyFont: 'Droid Sans', sans-serif;
 	font-family: $bodyFont;
 	font-weight: 400;
 	font-size: 1.2rem;
+
+	@media screen and #{$tablets}{
+		font-size: 1rem;
+	}
 }
 
 %bodyTextBold{
@@ -22,11 +34,17 @@ $bodyFont: 'Droid Sans', sans-serif;
 %secondaryHeadline{
 	@extend %bodyText;
 	font-size: 1.7rem;
+	@media screen and #{$tablets}{
+		font-size: 1.2rem;
+	}
 }
 
 %mainHeadline{
 	@extend %bodyTextBold;
 	font-size: 2.6rem;
+	@media screen and #{$tablets}{
+		font-size: 1.6rem;
+	}
 }
 
 %copyright{
@@ -34,5 +52,9 @@ $bodyFont: 'Droid Sans', sans-serif;
 }
 
 
+
+
+
 /**** Details ****/
 $dividingLine: "2px solid rgba(0, 0, 0, .1)";
+

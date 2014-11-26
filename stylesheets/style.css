@@ -14,14 +14,14 @@ body:after, .mainHeader:after, .mainNav:after, .mainFooter:after, .mainPageConte
 .mainNav li {
   width: 18.75%; }
 
-.dispatchFlag {
+.dispatchFlagWrap {
   width: 25%; }
 
 .contact, .address {
   width: 37.5%; }
 
-.pageLogo {
-  width: 50%; }
+.pageLogoWrap {
+  width: 56.25%; }
 
 .mainContent {
   width: 87.5%; }
@@ -29,21 +29,31 @@ body:after, .mainHeader:after, .mainNav:after, .mainFooter:after, .mainPageConte
 body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider, .copyright {
   width: 100%; }
 
+/**** Media Queries ****/
 /****  Colors  ****/
 /****  Fonts  ****/
-h2, .copyright, h3, body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider {
+h2, .copyright, h3, .overlay, body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider {
   font-family: "Droid Sans", sans-serif;
   font-weight: 400;
   font-size: 1.2rem; }
+  @media screen and (max-width: 767px) {
+    h2, .copyright, h3, .overlay, body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider {
+      font-size: 1rem; } }
 
 h2, .copyright {
   font-weight: 700; }
 
 h3 {
   font-size: 1.7rem; }
+  @media screen and (max-width: 767px) {
+    h3 {
+      font-size: 1.2rem; } }
 
 h2 {
   font-size: 2.6rem; }
+  @media screen and (max-width: 767px) {
+    h2 {
+      font-size: 1.6rem; } }
 
 /**** Details ****/
 /* Prevent the slideshow from flashing on load */
@@ -55,8 +65,8 @@ h2 {
   margin: 0 auto; }
 
 /* Show active item in the pagination */
-.slidesjs-pagination .active {
-  color: red; }
+.slidesjs-pagination a.active {
+  color: rgba(72, 69, 92, 0.8); }
 
 /* Media quires for a responsive layout */
 /* For tablets & smart phones */
@@ -91,8 +101,13 @@ iframe {
 .slidesjs-slide {
   height: 90%; }
 
-.slidesjs-previous, .slidesjs-next, .slidesjs-pagination-item a {
+.slidesjs-previous span, .slidesjs-next span, .slidesjs-pagination-item span {
   color: rgba(6, 0, 44, 0.8); }
+  .slidesjs-previous span:hover, .slidesjs-next span:hover, .slidesjs-pagination-item span:hover {
+    color: rgba(72, 69, 92, 0.8); }
+
+.active span {
+  color: rgba(72, 69, 92, 0.8); }
 
 .slidesjs-previous, .slidesjs-next, .slidesjs-pagination {
   position: absolute;
@@ -127,7 +142,6 @@ iframe {
   background-color: rgba(6, 0, 44, 0.8);
   color: white;
   z-index: 10;
-  font-size: 1.5rem;
   position: absolute;
   padding: 1.2rem;
   width: 50%; }
@@ -147,7 +161,7 @@ iframe {
   width: 100%; }
 
 /* Lower sizes and move icons up at smaller font sizes */
-@media (max-width: 979px) {
+@media screen and (max-width: 979px) {
   .slidesjs-pagination-item a {
     font-size: 1.75rem;
     margin-top: 2.5rem; }
@@ -156,9 +170,6 @@ iframe {
     margin-top: -15rem;
     font-size: 5rem; }
 
-  .overlay {
-    font-size: 1.2rem; }
-
   .topLeft {
     margin-top: -20rem;
     padding-left: 1.2rem; }
@@ -166,6 +177,19 @@ iframe {
   .bottomRight {
     margin-top: -8rem;
     padding-right: 1.2rem; } }
+@media screen and (max-width: 480px) {
+  .overlay {
+    width: 100%;
+    margin-top: -4.1rem;
+    padding: .5rem; }
+
+  .slidesjs-pagination-item a {
+    font-size: 1.5rem;
+    margin-top: 1.2rem; }
+
+  .slidesjs-next, .slidesjs-previous {
+    margin-top: -11rem;
+    font-size: 3.5rem; } }
 /*****  General  ******/
 body {
   background: url("../images/textures/brushed.png") #dbdbdb; }
@@ -185,15 +209,27 @@ a, a:visited {
   padding: 1.25rem;
   padding-left: 2rem; }
 
+.mainHeader a {
+  display: inline-block; }
+
+.pageLogo, .dispatchFlag {
+  min-width: 100%;
+  min-height: 100%; }
+
 /*****  mainNav  *****/
 .mainNav {
   margin: 0 auto; }
 
 .mainNav li {
   display: inline-block;
-  min-height: 5rem;
-  padding-top: 2rem;
+  height: 5rem;
+  line-height: 5rem;
   text-align: center; }
+
+.mainNav a {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: normal; }
 
 .mainNav li:hover {
   background-color: lightgray; }
@@ -215,9 +251,7 @@ a, a:visited {
   margin-left: 3rem; }
 
 .address {
-  margin-right: 3rem; }
-
-.address {
+  margin-right: 3rem;
   float: right; }
 
 .copyright {
@@ -225,3 +259,13 @@ a, a:visited {
   padding: 1rem 0;
   text-align: center;
   background-color: rgba(255, 255, 255, 0.3); }
+
+@media screen and (max-width: 767px) {
+  .contact, .address {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 2rem; }
+
+  .mainFooter {
+    padding: 1rem; } }
