@@ -19,6 +19,12 @@ margin will add to it*/
 	& > * {
 		float: left;
 	}
+
+	@media screen and #{$tablets}{
+		& > * {
+			float: none;
+		}
+	}
 }
 
 %container {

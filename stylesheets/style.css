@@ -5,7 +5,7 @@ margin will add to it*/
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-body:after, .mainHeader:after, .mainNav:after, .mainFooter:after, .mainPageContent:after, .slider:after {
+.mainFooter:after, .mainHeader:after, .pageLogoWrap:after {
   content: "";
   display: table;
   clear: both; }
@@ -14,19 +14,16 @@ body:after, .mainHeader:after, .mainNav:after, .mainFooter:after, .mainPageConte
 .mainNav li {
   width: 18.75%; }
 
-.dispatchFlagWrap {
+figure {
   width: 25%; }
 
 .contact, .address {
   width: 37.5%; }
 
-.pageLogoWrap {
-  width: 56.25%; }
-
 .mainContent {
   width: 87.5%; }
 
-body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider, .copyright {
+body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider, .pageLogoWrap, .copyright {
   width: 100%; }
 
 /**** Media Queries ****/
@@ -175,7 +172,7 @@ iframe {
     padding-left: 1.2rem; }
 
   .bottomRight {
-    margin-top: -8rem;
+    margin-top: -7rem;
     padding-right: 1.2rem; } }
 @media screen and (max-width: 480px) {
   .overlay {
@@ -185,7 +182,7 @@ iframe {
 
   .slidesjs-pagination-item a {
     font-size: 1.5rem;
-    margin-top: 1.2rem; }
+    margin-top: 1.5rem; }
 
   .slidesjs-next, .slidesjs-previous {
     margin-top: -11rem;
@@ -198,6 +195,9 @@ body {
   background-color: rgba(255, 255, 255, 0.3); }
   .mainFooter > *, .mainHeader > * {
     float: left; }
+  @media screen and (max-width: 767px) {
+    .mainFooter > *, .mainHeader > * {
+      float: none; } }
 
 a, a:visited {
   text-decoration: none;
@@ -206,27 +206,26 @@ a, a:visited {
 /*****  mainHeader  *****/
 .mainHeader {
   border-bottom: 2px solid rgba(0, 0, 0, .1);
-  padding: 1.25rem;
-  padding-left: 2rem; }
+  padding: 1rem;
+  padding-left: 3rem; }
 
-.mainHeader a {
-  display: inline-block; }
-
-.pageLogo, .dispatchFlag {
-  min-width: 100%;
-  min-height: 100%; }
+.pageLogoWrap > * {
+  float: left; }
+@media screen and (max-width: 767px) {
+  .pageLogoWrap > * {
+    float: none; } }
+.pageLogoWrap img, .pageLogoWrap a {
+  display: block; }
 
 /*****  mainNav  *****/
-.mainNav {
-  margin: 0 auto; }
-
 .mainNav li {
   display: inline-block;
   height: 5rem;
   line-height: 5rem;
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto; }
 
-.mainNav a {
+.navLink {
   display: inline-block;
   vertical-align: middle;
   line-height: normal; }
@@ -260,12 +259,99 @@ a, a:visited {
   text-align: center;
   background-color: rgba(255, 255, 255, 0.3); }
 
+/*****  Pages  ******/
+.right {
+  float: right; }
+
+.left {
+  float: left; }
+
+figure {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 10px; }
+  @media screen and (max-width: 480px) {
+    figure {
+      width: 100%; } }
+
+/*****  Mobile Things *****/
+.mobileDispatchBar, .hamburger {
+  display: none; }
+
+@media screen and (min-width: 1200px) {
+  .headerImageWrap {
+    width: 70%;
+    margin: 0 auto; }
+
+  .pageLogoWrap {
+    width: 80%;
+    height: 10rem; }
+
+  .pageLogo {
+    height: 8.5rem; }
+
+  .dispatchFlag {
+    height: 6.5rem; } }
+@media screen and (max-width: 979px) {
+  img {
+    display: block; }
+
+  .pageLogoWrap {
+    width: 100%; } }
 @media screen and (max-width: 767px) {
+  body {
+    padding: 0; }
+
+  .mainNav {
+    display: none; }
+
+  .hamburger {
+    position: fixed;
+    z-index: 100;
+    right: 0;
+    top: 0;
+    padding: .8rem;
+    font-size: 2.5rem;
+    color: white;
+    background-color: rgba(192, 192, 192, 0.9);
+    border-radius: 0 0 0 10px; }
+
   .contact, .address {
     width: 100%;
     margin: 0;
     text-align: center;
     padding-bottom: 2rem; }
 
+  .mainHeader {
+    padding: .5rem;
+    padding-top: 1.5rem; }
+
   .mainFooter {
-    padding: 1rem; } }
+    padding: 1rem; }
+
+  a.dispatchFlagLink {
+    display: none; }
+
+  .mobileDispatchBar, .hamburger {
+    display: block; }
+
+  a.mobileDispatchBar {
+    width: 100%;
+    height: 3rem;
+    background-color: rgba(6, 0, 44, 0.8);
+    color: white;
+    text-align: center;
+    line-height: 3rem; }
+
+  .mainNav {
+    border-bottom: 2px solid rgba(0, 0, 0, .1); } }
+@media screen and (max-width: 480px) {
+  .hamburger {
+    font-size: 1.5rem; }
+
+  .overlay {
+    display: none; }
+
+  .pageLogo {
+    height: 4rem;
+    overflow: hidden; } }

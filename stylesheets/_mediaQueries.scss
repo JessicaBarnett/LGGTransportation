@@ -1,11 +1,96 @@
+@media screen and #{$wide-screens}{
+	.mainNav li{
+		// width: 19.69%;
+	}
+	.headerImageWrap{
+		width: 70%;
+		margin: 0 auto;
+	}
+	.pageLogoWrap{
+		width: 80%;
+		height: 10rem;
+	}
+	.pageLogo{
+		height: 8.5rem;
+	}
+	.dispatchFlag{
+		height: 6.5rem;
+	}
+}
+
+@media screen and #{$laptops}{
+	.mainNav li{
+		// width: 18%;
+	}
+	img{
+		display: block;
+	}
+	.pageLogoWrap{
+		width: 100%;
+		// margin: 0 auto;
+	}
+}
+
 @media screen and #{$tablets}{
+	body{
+		padding: 0;
+	}
+	.mainNav{
+		display: none;
+	}
+	.hamburger{
+		position: fixed;
+		z-index: 100;
+		right: 0;
+		top: 0;
+		padding: .8rem;
+		font-size: 2.5rem;
+		color: white;
+		background-color: rgba(192, 192, 192, .9);
+		border-radius: 0 0 0 10px;
+	}
 	.contact, .address{
 		width: 100%; //can't @extend %eightColumns in a media query (???)
 		margin: 0;
 		text-align: center;
 		padding-bottom: 2rem;
 	}
+	.mainHeader{
+		padding: .5rem;
+		padding-top: 1.5rem;
+	}
 	.mainFooter{
 		padding: 1rem;
 	}
+	a.dispatchFlagLink{
+		display: none;
+	}
+	.mobileDispatchBar, .hamburger{
+		display: block;
+	}
+	a.mobileDispatchBar{
+		width: 100%;
+		height: 3rem;
+		background-color: $darkPurple;
+		color: white;
+		text-align: center;
+		line-height: 3rem;
+	}
+	.mainNav{
+		border-bottom: #{$dividingLine};
+	}
+}
+
+@media screen and #{$smartphones}{
+	.hamburger{
+		font-size: 1.5rem;
+	}
+	.overlay{
+		display: none;
+	}
+	.pageLogo{
+		height: 4rem;
+		overflow: hidden;
+	}
+
 }
