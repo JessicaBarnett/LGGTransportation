@@ -116,16 +116,22 @@ iframe{
 
 @media screen and #{$smartphones}{
   .overlay{
-    width: 100%;
-    margin-top: -4.1rem;
+    margin-top: 0;
     padding: .5rem;
+    min-height: 5rem;
+  }
+  .slidesjs-container{
+    height: 16rem !important; //using !important to override some styling applied in slidesJS pligin
+  }
+  .slidesjs-pagination{
+    margin-top: -2.5rem;
   }
   .slidesjs-pagination-item a{
     font-size: 1.5rem;
     margin-top: 1.5rem;
   } 
   .slidesjs-next, .slidesjs-previous{
-    margin-top: -11rem;
+    margin-top: -13rem;
     font-size: 3.5rem;
   }
 

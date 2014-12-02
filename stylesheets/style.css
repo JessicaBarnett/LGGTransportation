@@ -176,16 +176,22 @@ iframe {
     padding-right: 1.2rem; } }
 @media screen and (max-width: 480px) {
   .overlay {
-    width: 100%;
-    margin-top: -4.1rem;
-    padding: .5rem; }
+    margin-top: 0;
+    padding: .5rem;
+    min-height: 5rem; }
+
+  .slidesjs-container {
+    height: 16rem !important; }
+
+  .slidesjs-pagination {
+    margin-top: -2.5rem; }
 
   .slidesjs-pagination-item a {
     font-size: 1.5rem;
     margin-top: 1.5rem; }
 
   .slidesjs-next, .slidesjs-previous {
-    margin-top: -11rem;
+    margin-top: -13rem;
     font-size: 3.5rem; } }
 /*****  General  ******/
 body {
@@ -218,6 +224,9 @@ a, a:visited {
   display: block; }
 
 /*****  mainNav  *****/
+.mainNav {
+  border-bottom: 2px solid rgba(0, 0, 0, .1); }
+
 .mainNav li {
   display: inline-block;
   height: 5rem;
@@ -230,7 +239,7 @@ a, a:visited {
   vertical-align: middle;
   line-height: normal; }
 
-.mainNav li:hover {
+.mainNav li:hover, .mobileNavDrawer li:hover {
   background-color: lightgray; }
 
 /***** mainContent ******/
@@ -266,10 +275,17 @@ a, a:visited {
 .left {
   float: left; }
 
+.heading, .subheading {
+  padding: 1rem .8rem; }
+
 figure {
-  padding: 1rem;
+  margin: 1rem;
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px; }
+  border-radius: 10px;
+  width: 45%; }
+  figure img {
+    display: block;
+    max-width: 100%; }
   @media screen and (max-width: 480px) {
     figure {
       width: 100%; } }
@@ -316,6 +332,21 @@ figure {
     background-color: rgba(192, 192, 192, 0.9);
     border-radius: 0 0 0 10px; }
 
+  .mobileNavDrawer {
+    position: fixed;
+    right: -50%;
+    top: 0;
+    width: 50%;
+    background-color: silver;
+    z-index: 80;
+    border-radius: 0 0 0 10px; }
+
+  .mobileNavDrawer li {
+    padding: 1rem; }
+
+  .mobileNavDrawer li a {
+    color: white; }
+
   .contact, .address {
     width: 100%;
     margin: 0;
@@ -328,6 +359,9 @@ figure {
 
   .mainFooter {
     padding: 1rem; }
+
+  .mainContent {
+    width: 95%; }
 
   a.dispatchFlagLink {
     display: none; }
@@ -350,8 +384,11 @@ figure {
     font-size: 1.5rem; }
 
   .overlay {
-    display: none; }
+    width: 100%; }
 
   .pageLogo {
     height: 4rem;
-    overflow: hidden; } }
+    overflow: hidden; }
+
+  .mainContent {
+    margin-top: 0; } }

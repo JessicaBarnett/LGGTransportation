@@ -35,6 +35,9 @@
 	body{
 		padding: 0;
 	}
+
+	//navigation
+
 	.mainNav{
 		display: none;
 	}
@@ -46,9 +49,29 @@
 		padding: .8rem;
 		font-size: 2.5rem;
 		color: white;
-		background-color: rgba(192, 192, 192, .9);
+		background-color: $mobileNavColor;
 		border-radius: 0 0 0 10px;
 	}
+	.mobileNavDrawer{
+		position: fixed;
+		right: -50%;//so drawer will be off-screen from the outset
+		top: 0;
+		width: 50%;
+		background-color: $mobileNavColorOpaque;		
+		z-index: 80;
+		border-radius: 0 0 0 10px;
+	}
+	.mobileNavDrawer li{
+		padding: 1rem;
+
+	}
+	.mobileNavDrawer li a{
+		color: white;
+	}
+
+
+	//Other
+
 	.contact, .address{
 		width: 100%; //can't @extend %eightColumns in a media query (???)
 		margin: 0;
@@ -61,6 +84,9 @@
 	}
 	.mainFooter{
 		padding: 1rem;
+	}
+	.mainContent{
+		width: 95%;
 	}
 	a.dispatchFlagLink{
 		display: none;
@@ -82,15 +108,23 @@
 }
 
 @media screen and #{$smartphones}{
+	//mobile Nav
+
 	.hamburger{
 		font-size: 1.5rem;
 	}
+
+	//other
+
 	.overlay{
-		display: none;
+		width: 100%;
 	}
 	.pageLogo{
 		height: 4rem;
 		overflow: hidden;
+	}
+	.mainContent{
+		margin-top: 0;
 	}
 
 }
