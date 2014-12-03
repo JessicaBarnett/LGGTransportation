@@ -5,10 +5,21 @@ margin will add to it*/
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-.mainFooter:after, .mainHeader:after, .pageLogoWrap:after {
-  content: "";
-  display: table;
-  clear: both; }
+/***  24 col grid  ***/
+.mainNav li {
+  width: 16%; }
+
+.contact, .address {
+  width: 37.5%; }
+
+figure, form {
+  width: 45%; }
+
+.mainContent {
+  width: 87.5%; }
+
+body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider, .pageLogoWrap, .copyright, textarea, input, label {
+  width: 100%; }
 
 /***** 16 col grid *****/
 /*
@@ -76,22 +87,6 @@ margin will add to it*/
 	// 	width: 100%;
 	// } 
 */
-/***  24 col grid  ***/
-.mainNav li {
-  width: 16%; }
-
-figure {
-  width: 25%; }
-
-.contact, .address {
-  width: 37.5%; }
-
-.mainContent {
-  width: 87.5%; }
-
-body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider, .pageLogoWrap, .copyright {
-  width: 100%; }
-
 /**** Media Queries ****/
 /****  Colors  ****/
 /****  Fonts  ****/
@@ -119,6 +114,12 @@ h2 {
       font-size: 1.6rem; } }
 
 /**** Details ****/
+/**** re-suable classes ****/
+.mainFooter:after, .mainHeader:after, .pageLogoWrap:after, .mainContent:after, form:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 /* Prevent the slideshow from flashing on load */
 #slides {
   display: none; }
@@ -241,23 +242,26 @@ iframe {
     margin-top: -7rem;
     padding-right: 1.2rem; } }
 @media screen and (max-width: 480px) {
+  #slides {
+    height: 20rem; }
+
   .overlay {
     margin-top: 0;
     padding: .5rem;
     min-height: 5rem; }
 
   .slidesjs-container {
-    height: 16rem !important; }
+    height: 20rem !important; }
 
   .slidesjs-pagination {
-    margin-top: -2.5rem; }
+    margin-top: -45vh; }
 
   .slidesjs-pagination-item a {
     font-size: 1.5rem;
     margin-top: 1.5rem; }
 
   .slidesjs-next, .slidesjs-previous {
-    margin-top: -13rem;
+    margin-top: -65vh;
     font-size: 3.5rem; } }
 /*****  General  ******/
 body {
@@ -310,7 +314,7 @@ a, a:visited {
 
 /***** mainContent ******/
 .mainContent {
-  margin: 2.5rem auto; }
+  margin: 1.5rem auto; }
 
 .contentParagraph {
   margin-top: 2rem; }
@@ -342,13 +346,12 @@ a, a:visited {
   float: left; }
 
 .heading, .subheading {
-  padding: 1rem .8rem; }
+  padding: 1rem 0; }
 
 figure {
   margin: 1rem;
   background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-  width: 45%; }
+  border-radius: 10px; }
   figure img {
     display: block;
     max-width: 100%; }
@@ -357,6 +360,16 @@ figure {
       width: 100%; } }
 
 /***** Forms *****/
+form {
+  float: left; }
+
+label {
+  float: left;
+  padding: .3rem 0; }
+
+textarea {
+  height: 7rem; }
+
 /*****  Mobile Things *****/
 .mobileDispatchBar, .hamburger {
   display: none; }

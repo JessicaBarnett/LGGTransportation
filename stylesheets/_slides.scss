@@ -115,23 +115,26 @@ iframe{
 }
 
 @media screen and #{$smartphones}{
+  #slides{
+    height: 20rem;
+  }
   .overlay{
     margin-top: 0;
     padding: .5rem;
     min-height: 5rem;
   }
   .slidesjs-container{
-    height: 16rem !important; //using !important to override some styling applied in slidesJS pligin
+    height: 20rem !important; //using !important to override some styling applied in slidesJS pligin
   }
   .slidesjs-pagination{
-    margin-top: -2.5rem;
+    margin-top: -45vh;
   }
   .slidesjs-pagination-item a{
     font-size: 1.5rem;
     margin-top: 1.5rem;
   } 
   .slidesjs-next, .slidesjs-previous{
-    margin-top: -13rem;
+    margin-top: -65vh;
     font-size: 3.5rem;
   }
 

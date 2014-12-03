@@ -18,6 +18,7 @@ $mobileNavColorOpaque: rgb(192, 192, 192);
 
 $bodyFont: 'Droid Sans', sans-serif;
 
+
 %bodyText{
 	font-family: $bodyFont;
 	font-weight: 400;
@@ -54,9 +55,33 @@ $bodyFont: 'Droid Sans', sans-serif;
 }
 
 
-
-
-
 /**** Details ****/
 $dividingLine: "2px solid rgba(0, 0, 0, .1)";
 
+
+/**** re-suable classes ****/
+
+%clearfix{
+	&:after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin floatAllDirectChildrenLeft{
+	@extend %clearfix;
+	& > * {
+		float: left;
+	}
+
+	@media screen and #{$tablets}{
+		& > * {
+			float: none;
+		}
+	}
+}
+
+%container {
+	@extend %clearfix;  
+}

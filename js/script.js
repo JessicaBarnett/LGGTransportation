@@ -52,8 +52,14 @@ function setNav(){
 	var tabletMQ = window.matchMedia("screen and (max-width: 767px)");
 	var drawer;
 
+	function reset (){
+		$(".mobileNavDrawer").remove();
+		$(".hamburger").unbind();  
+	}
+
 	//creates mobile navigation.
 	if (tabletMQ.matches){
+		reset();
 		$("body").prepend($('<nav class="mobileNavDrawer">' +
 			'<ul>'+
 				'<li><a class="mobileNavLink" href="index.html">Home</a></li>' +
@@ -67,16 +73,13 @@ function setNav(){
 
 		//creates drawer object to manipulate nav as a drawer
 		drawer = $.fn.Drawer($(".mobileNavDrawer"));
-		//removes old handlers
-		$(".hamburger").unbind();  
 		//adds click handler to open/close drawer
 		$(".hamburger").click(drawer.toggleDrawer);
 
 	}
 	else{
 		drawer = null;
-		$(".mobileNavDrawer").remove();
-		$(".hamburger").unbind();  
+		reset();
 	}
 
 }

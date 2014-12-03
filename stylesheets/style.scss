@@ -73,8 +73,9 @@ a, a:visited{
 /***** mainContent ******/
 
 .mainContent{
+	@extend %clearfix;  
 	@extend %twentyOneColumns;
-	margin: 2.5rem auto;
+	margin: 1.5rem auto;
 
 }
 
@@ -131,16 +132,15 @@ h3{
 }
 
 .heading, .subheading{
-	padding: 1rem .8rem;
+	padding: 1rem 0;
 
 }
 
 figure{
-	@extend %sixColumns;
+	@extend %elevenColumns;
 	margin: 1rem;
 	background-color: rgba(255, 255, 255, .3);
 	border-radius: 10px;
-	width: 45%;
 
 	img{
 		display: block;
@@ -155,9 +155,24 @@ figure{
 
 /***** Forms *****/
  
- form{
 
- }
+form{
+	@extend %elevenColumns;
+	@extend %clearfix;
+	float: left;
+}
+label{
+	float: left;
+	padding: .3rem 0;
+}
+textarea, input, label {
+	@extend %twentyFourColumns;
+}
+
+textarea{
+	height: 7rem;
+}
+
 
 /*****  Mobile Things *****/
 
