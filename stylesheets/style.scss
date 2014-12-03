@@ -11,7 +11,7 @@ body{
 }
 
 body, .mainHeader, .mainNav, .mainFooter, .mainPageContent, .slider {
-	@extend %sixteenColumns;
+	@extend %twentyFourColumns;
 	@extend %bodyText;
 }
 .mainFooter, .mainHeader{
@@ -29,21 +29,19 @@ a, a:visited{
 
 .mainHeader{
 	border-bottom: #{$dividingLine};
-	@extend %sixteenColumns;
+	@extend %twentyFourColumns;
 	padding: 1rem;
 	padding-left: 3rem;
 }
 
 .pageLogoWrap {
-	@extend %sixteenColumns;
+	@extend %twentyFourColumns;
 	@include floatAllDirectChildrenLeft;
 
 	img, a{
 		display: block;
 	}
 }
-
-
 
 
 /*****  mainNav  *****/
@@ -54,7 +52,7 @@ a, a:visited{
 
 .mainNav li{
 	display: inline-block;
-	@extend %threeColumns;
+	@extend %fourColumns;
 	// width: 19.69%; //I have a 1.55% margin floating around somewhere...?
 	height: 5rem;
 	line-height: 5rem;
@@ -75,7 +73,7 @@ a, a:visited{
 /***** mainContent ******/
 
 .mainContent{
-	@extend %fourteenColumns;
+	@extend %twentyOneColumns;
 	margin: 2.5rem auto;
 
 }
@@ -101,7 +99,7 @@ h3{
 }
 
 .contact, .address{
-	@extend %sixColumns;
+	@extend %nineColumns;
 }
 
 .contact {
@@ -114,7 +112,7 @@ h3{
 }
 
 .copyright{
-	@extend %sixteenColumns;
+	@extend %twentyFourColumns;
 	@extend %copyright;
 	border-top: #{$dividingLine};
 	padding: 1rem 0;
@@ -138,7 +136,7 @@ h3{
 }
 
 figure{
-	@extend %fourColumns;
+	@extend %sixColumns;
 	margin: 1rem;
 	background-color: rgba(255, 255, 255, .3);
 	border-radius: 10px;
@@ -155,6 +153,11 @@ figure{
 	}
 }
 
+/***** Forms *****/
+ 
+ form{
+
+ }
 
 /*****  Mobile Things *****/
 

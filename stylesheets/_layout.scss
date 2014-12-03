@@ -31,68 +31,167 @@ margin will add to it*/
 	@extend %clearfix;  
 }
 
-/***** grid *****/
+/***** 16 col grid *****/
+/*
+	// %oneColumn{
+	// 	width: 6.25%;
+	// }
+
+	// %twoColumns{
+	// 	width: 12.5%;
+	// }
+
+	// %threeColumns{
+	// 	width: 18.75%;
+	// }
+
+	// %fourColumns{
+	// 	width: 25%;
+	// }
+
+	// %fiveColumns{
+	// 	width: 31.25%;
+	// }
+
+	// %sixColumns{
+	// 	width: 37.5%;
+	// }
+
+	// %sevenColumns{
+	// 	width: 43.75%;
+	// }
+
+	// %eightColumns{
+	// 	width: 50%;
+	// } 
+
+	// %nineColumns{
+	// 	width: 56.25%;
+	// } 
+
+	// %tenColumns{
+	// 	width: 62.5%;
+	// } 
+
+	// %elevenColumns{
+	// 	width: 68.75%;
+	// } 
+
+	// %twelveColumns{
+	// 	width: 75%;
+	// } 
+
+	// %thirteenColumns{
+	// 	width: 81.25%;
+	// } 
+
+	// %fourteenColumns{
+	// 	width: 87.5%;
+	// } 
+
+	// %fifteenColumns{
+	// 	width: 93.75%;
+	// } 
+
+	// %sixteenColumns{
+	// 	width: 100%;
+	// } 
+*/
+
+/***  24 col grid  ***/
 
 %oneColumn{
-	width: 6.25%;
+	width: floor(100% / 24);  //4.166666666666667%;
 }
 
 %twoColumns{
-	width: 12.5%;
+	width: floor(100% / 24 * 2); //8.3333333333333332%;
 }
 
 %threeColumns{
-	width: 18.75%;
+	width: 100% / 24 * 3; //12.5%;
 }
 
 %fourColumns{
-	width: 25%;
+	width: floor(100% / 24 * 4); //16.666666666666667%;
 }
 
 %fiveColumns{
-	width: 31.25%;
+	width: floor(100% / 24 * 5); //20.833333333333332%;
 }
 
 %sixColumns{
-	width: 37.5%;
+	width: 100% / 24 * 6; //25%;
 }
 
 %sevenColumns{
-	width: 43.75%;
+	width: floor(100% / 24 * 7); //29.166666666666667%;
 }
 
 %eightColumns{
-	width: 50%;
+	width: floor(100% / 24 * 8); //33.333333333333332%;
 } 
 
 %nineColumns{
-	width: 56.25%;
+	width: 100% / 24 * 9; //37.5%;
 } 
 
 %tenColumns{
-	width: 62.5%;
+	width: floor(100% / 24 * 10); //41.666666666666667%;
 } 
 
 %elevenColumns{
-	width: 68.75%;
+	width: floor(100% / 24 * 11); //45.833333333333332%;
 } 
 
 %twelveColumns{
-	width: 75%;
+	width: 100% / 24 * 12; //50%;
 } 
 
 %thirteenColumns{
-	width: 81.25%;
+	width: floor(100% / 24 * 13); //54.166666666666667%;
 } 
 
 %fourteenColumns{
-	width: 87.5%;
+	width: floor(100% / 24 * 14); //58.333333333333332%;
 } 
 
 %fifteenColumns{
-	width: 93.75%;
+	width: 100% / 24 * 15; //62.5%;
 } 
 
 %sixteenColumns{
-	width: 100%;
+	width: floor(100% / 24 * 16); //66.666666666666667%;
 } 
+
+%seventeenColumns{
+	width: floor(100% / 24 * 17); //70.833333333333332%;
+}
+
+%eighteenColumns{
+	width: 100% / 24 * 18; //75%;
+}
+
+%nineteenColumns{
+	width: floor(100% / 24 * 19); //79.1666666666666667%;
+}
+
+%twentyColumns{
+	width: floor(100% / 24 * 20); //83.3333333333333332%;
+}
+
+%twentyOneColumns{
+	width: 100% / 24 * 21; //87.5%;
+}
+
+%twentyTwoColumns{
+	width: floor(100% / 24 * 22); //91.6666666666666667%;
+}
+
+%twentyThreeColumns{
+	width: floor(100% / 24 * 23); //95.8888888888888889%;
+}
+
+%twentyFourColumns{
+	width: 100%;
+}

@@ -56,11 +56,12 @@ function setNav(){
 	if (tabletMQ.matches){
 		$("body").prepend($('<nav class="mobileNavDrawer">' +
 			'<ul>'+
+				'<li><a class="mobileNavLink" href="index.html">Home</a></li>' +
 				'<li><a class="mobileNavLink" href="about.html">About Us</a></li>' +
-				'<li><a class="mobileNavLink" href="#">Services</a></li>' +
-				'<li><a class="mobileNavLink" href="#">Who Pays?</a></li> '+
-				'<li><a class="mobileNavLink" href="#">Schedule a Transport</a></li>' +
-				'<li><a class="mobileNavLink" href="#">Contact Us</a></li>' +
+				'<li><a class="mobileNavLink" href="services.html">Services</a></li>' +
+				'<li><a class="mobileNavLink" href="payment.html">Who Pays?</a></li> '+
+				'<li><a class="mobileNavLink" href="schedule.html">Schedule a Transport</a></li>' +
+				'<li><a class="mobileNavLink" href="contact.html">Contact Us</a></li>' +
 			'</ul>' +
 		'</nav>'));
 
